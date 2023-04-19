@@ -90,6 +90,7 @@ body {
           align-items: center;
           border-radius: 10px;
           cursor: pointer;
+
           p {
             text-align: center;
             color: #a8afbd;
@@ -97,6 +98,7 @@ body {
             font-weight: 600;
             font-family: "Varela Round", sans-serif;
           }
+
           &:hover {
             background-color: #48494b;
             p {

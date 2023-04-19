@@ -4,7 +4,6 @@ const logPopClose = document.querySelector(".lp-close");
 const termsPop = document.querySelector(".terms-popUp");
 const termsBtn = document.querySelector(".fs-terms");
 const trmClose = document.querySelector(".tp-c");
-
 const regLogBtn = document.querySelector(".lpm-regs-btn");
 const regPop = document.querySelector(".registerPopUp");
 const regClose = document.querySelector(".rp-close");

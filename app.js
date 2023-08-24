@@ -42,6 +42,16 @@ const foursMiddle = document.querySelector(".fours-middle");
 const fourthSection = document.querySelector(".fourth-section");
 const forsmSecondList = document.querySelector(".forsm-second-list");
 
+const hamburger = document.querySelector(".fst-hamburger");
+const resPop = document.querySelector(".responsivePopUp");
+
+const loginResBtn = document.querySelector(".responsivePopUp .rp-2");
+const responsivLogIn = document.querySelector(".responsivLogIn");
+
+hamburger.addEventListener("click", () => {
+  resPop.classList.toggle("active");
+});
+
 let P = true;
 showMoreInfo.addEventListener("click", () => {
   fourthSection.classList.toggle("foruthSectionAc");
@@ -114,7 +124,7 @@ window.addEventListener("load", () => {
     return;
   } else {
     window.location.href =
-      "http://127.0.0.1:5500/bprojects/Hulu%20Clon/hulu-main/hulu.html";
+      "http://127.0.0.1:5500/HuluClon%2B/hulu-main/hulu.html";
   }
 });
 
@@ -146,7 +156,7 @@ logInBtn.addEventListener("click", () => {
   if (EmailInput === Data?.email && PasswordInput === Data?.password) {
     logInBtn.style.background = "green";
     window.location.href =
-      "http://127.0.0.1:5500/bprojects/Hulu%20Clon/hulu-main/hulu.html";
+      "http://127.0.0.1:5500/HuluClon%2B/hulu-main/hulu.html";
     logEmailInput.value = "";
     logPasswordInput.value = "";
   } else {
@@ -180,4 +190,9 @@ regLogBtn.onclick = () => {
 regClose.onclick = () => {
   logPopUp.style.display = "flex";
   regPop.style.display = "none";
+};
+
+loginResBtn.onclick = () => {
+  logPopUp.style.display = "flex";
+  document.body.style.overflow = "hidden";
 };

@@ -8,6 +8,8 @@ const clear = document.querySelector(".delete-input");
 const searchInput = document.querySelector(".search-input");
 const search2 = document.querySelector(".search2");
 
+const nav = document.querySelector(".nav-bar");
+
 const homeBtn = document.querySelector(".home");
 const trendingBtn = document.querySelector(".trending");
 const verifiedBtn = document.querySelector(".verified");
@@ -21,8 +23,7 @@ const API_URL =
   "/discover/movie?77b75897bd6de248789745dbd1270fe7&&language=en-US&sort_by=popularity.desc";
 profileBtn.addEventListener("click", () => {
   localStorage.removeItem("signData");
-  window.location.href =
-    "http://127.0.0.1:5500/bprojects/Hulu%20Clon/hulu-login.html";
+  window.location.href = "http://127.0.0.1:5500/HuluClon%2B/hulu-login.html";
 });
 
 window.addEventListener("load", () => {
@@ -32,10 +33,15 @@ window.addEventListener("load", () => {
   if (signCheck) {
     return;
   } else {
-    window.location.href =
-      "http://127.0.0.1:5500/bprojects/Hulu%20Clon/hulu-login.html";
+    window.location.href = "http://127.0.0.1:5500/HuluClon%2B/hulu-login.html";
   }
 });
+
+const xs = window.matchMedia("(max-width: 320px)");
+const x = window.matchMedia("(max-width: 375px)");
+const M = window.matchMedia("(max-width: 425px)");
+const L = window.matchMedia("(max-width: 768px)");
+const XL = window.matchMedia("(max-width: 1024px)");
 
 search.onclick = () => {
   search.classList.add("active");
@@ -53,6 +59,20 @@ search.onclick = () => {
     clear.style.display = "block";
   }, 300);
   searchP.style.display = "none";
+  if (xs.matches) {
+    nav.style.margin = "310px 0 0 22px ";
+    filmList.style.margin = "400px 0 0 2px";
+  } else if (x.matches) {
+    nav.style.margin = "310px 0 0 22px ";
+    filmList.style.margin = "400px 0 0 2px";
+  } else if (M.matches) {
+    nav.style.margin = "330px 0 0 60px ";
+    filmList.style.margin = "420px 0 0 2px";
+  } else if (L.matches) {
+    nav.style.margin = "290px 0 0 60px ";
+  } else if (XL.matches) {
+    nav.style.margin = "290px 0 0 60px ";
+  }
 };
 
 closeBar.addEventListener("click", () => {
@@ -65,6 +85,20 @@ closeBar.addEventListener("click", () => {
   searchP.style.display = "flex";
   search.style.display = "block";
   clear.style.display = "none";
+  if (xs.matches) {
+    nav.style.margin = "250px 0 0 22px ";
+    filmList.style.margin = "400px 0 0 2px";
+  } else if (x.matches) {
+    nav.style.margin = "250px 0 0 22px ";
+    filmList.style.margin = "400px 0 0 2px";
+  } else if (M.matches) {
+    nav.style.margin = "250px 0 0 60px ";
+    filmList.style.margin = "350px 0 0 2px";
+  } else if (L.matches) {
+    nav.style.margin = "250px 0 0 60px ";
+  } else if (XL.matches) {
+    nav.style.margin = "250px 0 0 60px ";
+  }
 });
 
 clear.onclick = () => {
